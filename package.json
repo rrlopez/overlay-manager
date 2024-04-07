@@ -7,18 +7,15 @@
     "name": "Ricardo Rey Crisanto V. Lopez II",
     "email": "ricardolopez06@gmail.com"
   },
-  "main": "build/index.js",
-  "module": "build/index.es.js",
-  "types": "build/src/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/src/index.d.ts",
   "files": [
      "build"
   ],
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
-    "prepublishOnly": "npm run build",
-    "storybook": "storybook dev -p 6006",
-    "storybook:export": "build-storybook",
-    "build-storybook": "storybook build"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "react",
