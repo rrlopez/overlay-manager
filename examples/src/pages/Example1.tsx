@@ -1,4 +1,4 @@
-import { OverlayManager, addOverlay } from "@rrlopez/overlay-manager/dist";
+import { OverlayManager, addOverlay } from "@rrlopez/overlay-manager";
 import {
   Dialog,
   DialogContent,
@@ -26,7 +26,7 @@ function Modal({open, onClose}: {open: boolean, onClose: ()=>null}) {
 	
   return (
     <Dialog defaultOpen={open} onOpenChange={onClose}>
-			<DialogContent>
+			<DialogContent className="bg-base-100">
 				<DialogHeader>
 					<DialogTitle>Are you absolutely sure?</DialogTitle>
 					<DialogDescription>

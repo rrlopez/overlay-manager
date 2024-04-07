@@ -8,10 +8,9 @@
     "email": "ricardolopez06@gmail.com"
   },
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
   "types": "dist/src/index.d.ts",
   "files": [
-     "build"
+     "dist"
   ],
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
