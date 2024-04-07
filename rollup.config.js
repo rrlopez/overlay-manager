@@ -12,7 +12,8 @@ export default {
   output: [
     {
       file: packageJson.main,
-      format: "es",
+      format: 'es',
+      exports: 'named',
     },
   ],
   plugins: [
@@ -20,10 +21,9 @@ export default {
     resolve(),
     commonjs(),
     typescript({
-      useTsconfigDeclarationDir: true,
-      tsconfigOverride: {
-        exclude: ["examples/**"],
-      },
+      rollupCommonJSResolveHack: false,
+      clean: true,
+      exclude: ["examples/**"],
     }),
     postcss(),
     terser({
