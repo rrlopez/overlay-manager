@@ -1,10 +1,8 @@
+import Example1 from "./pages/Example1"
+
 function App() {
 
-  return (<div className="w-screen h-screen flex items-center justify-center">
-    <h1 className="btn">
-      Click Me
-    </h1>
-  </div>)
+  return (<Example1/>)
 }
 
 export default App
