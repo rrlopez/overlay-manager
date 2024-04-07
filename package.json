@@ -34,6 +34,9 @@
     "url": "https://github.com/rrlopez/overlay-manager/issues"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
