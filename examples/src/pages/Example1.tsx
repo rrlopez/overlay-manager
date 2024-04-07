@@ -1,34 +1,42 @@
+import { OverlayManager, addOverlay } from "@rrlopez/overlay-manager/dist";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
+
 function Example1() {
-
-	const handleClick = ()=>{
-
-	}
-
+  const handleClick = () => {
+    addOverlay(Modal);
+  };
 
   return (
     <div className="w-screen h-screen flex items-center justify-center">
-      <button className="btn" onClick={handleClick}>Click Me</button>
-			<Modal/>
+      <OverlayManager />
+      <button className="btn btn-primary btn-bordered" onClick={handleClick}>
+        Click Me
+      </button>
     </div>
   );
 }
 
-function Modal() {
-	return (
-	<dialog open className="modal">
-		<div className="modal-box">
-			<h3 className="font-bold text-lg">Hello!</h3>
-			<p className="py-4">
-				Press ESC key or click the button below to close
-			</p>
-			<div className="modal-action">
-				<form method="dialog">
-					<button className="btn">Close</button>
-				</form>
-			</div>
-		</div>
-	</dialog>
-	)
+function Modal({open, onClose}: {open: boolean, onClose: ()=>null}) {
+	
+  return (
+    <Dialog defaultOpen={open} onOpenChange={onClose}>
+			<DialogContent>
+				<DialogHeader>
+					<DialogTitle>Are you absolutely sure?</DialogTitle>
+					<DialogDescription>
+						This action cannot be undone. This will permanently delete your account
+						and remove your data from our servers.
+					</DialogDescription>
+				</DialogHeader>
+			</DialogContent>
+		</Dialog>
+  );
 }
 
 export default Example1;

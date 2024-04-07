@@ -23,6 +23,8 @@
     "modal",
     "toast",
     "drawer",
+    "dialog",
+    "prompt",
     "npm"
   ],
   "repository": {

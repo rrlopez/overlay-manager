@@ -1,8 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+module.exports = {
+  darkMode: ["class"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
+  prefix: "",
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui")],
-};
+  plugins: [require("daisyui"), require("tailwindcss-animate")],
+}
